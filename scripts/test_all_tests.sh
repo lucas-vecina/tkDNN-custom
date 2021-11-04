@@ -25,9 +25,9 @@ function print_output {
         echo -e "$2 ${PINK}ERROR FOR EVERY CHECK${NC}"
     else
         echo -e "$2 ${RED}NOT OKAY (OPENCV maybe)${NC}"
-    fi 
+    fi
 
-} 
+}
 
 out_file=results.log
 rm $out_file
@@ -67,8 +67,8 @@ do
 
     export TKDNN_BATCHSIZE=2
     echo -e "${ORANGE}Batch $TKDNN_BATCHSIZE ${NC}"
-    
-    test_net mnist    
+
+    test_net mnist
     # ./test_imuodom &>> $out_file
     # print_output $? imuodom
 
@@ -82,6 +82,7 @@ do
     test_net yolo4_berkeley
     test_net yolo4_berkeley_f1
     test_net yolo4tiny
+    test_net yolo4tiny-custom
     test_net yolo4tiny_512
     test_net yolo3
     test_net yolo3_berkeley
@@ -106,4 +107,4 @@ do
     test_net shelfnet_berkeley
 done
 
-echo "If errors occured, check logfile $out_file" 
+echo "If errors occured, check logfile $out_file"
