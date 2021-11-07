@@ -14,7 +14,7 @@ int main() {
         bin_path + "/debug/layer37_out.bin"
     };
     std::string wgs_path  = bin_path + "/layers";
-    std::string cfg_path  = std::string(TKDNN_PATH) + "/yolo4tiny-custom/yolov4-tiny-custom-test.cfg";
+    std::string cfg_path  = std::string(TKDNN_PATH) + "/yolo4tiny-custom/yolov4-tiny-custom.cfg";
     std::string name_path = std::string(TKDNN_PATH) + "/yolo4tiny-custom/obj.names";
     downloadWeightsifDoNotExist(input_bins[0], bin_path, "https://cloud.hipert.unimore.it/s/iRnc4pSqmx78gJs/download");
 
