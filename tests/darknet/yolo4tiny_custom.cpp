@@ -5,7 +5,7 @@
 #include "DarknetParser.h"
 
 int main() {
-    std::string bin_path  = "yolo4tiny-custom";
+    std::string bin_path  = "yolo4tiny_custom";
     std::vector<std::string> input_bins = {
         bin_path + "/layers/input.bin"
     };
@@ -14,8 +14,8 @@ int main() {
         bin_path + "/debug/layer37_out.bin"
     };
     std::string wgs_path  = bin_path + "/layers";
-    std::string cfg_path  = std::string(TKDNN_PATH) + "/tests/darknet/cfg/yolov4-tiny-custom.cfg";
-    std::string name_path = std::string(TKDNN_PATH) + "/tests/darknet/names/obj.names";
+    std::string cfg_path  = std::string(TKDNN_PATH) + "/tests/darknet/cfg/yolo4tiny_custom.cfg";
+    std::string name_path = std::string(TKDNN_PATH) + "/tests/darknet/names/yolo4tiny_custom.names";
     downloadWeightsifDoNotExist(input_bins[0], bin_path, "https://cloud.hipert.unimore.it/s/iRnc4pSqmx78gJs/download");
 
     // parse darknet network
