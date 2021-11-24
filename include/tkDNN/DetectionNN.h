@@ -68,7 +68,7 @@ class DetectionNN {
 
     public:
         int classes = 0;
-        float confThreshold = 0.3; /*threshold on the confidence of the boxes*/
+        float confThreshold = 0.001; /*threshold on the confidence of the boxes*/
 
         std::vector<tk::dnn::box> detected; /*bounding boxes in output*/
         std::vector<std::vector<tk::dnn::box>> batchDetected; /*bounding boxes in output*/
