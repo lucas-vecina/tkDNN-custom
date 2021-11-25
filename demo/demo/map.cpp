@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     const char * net = "yolo3.rt";
     const char * labels_path = "../demo/COCO_val2017/all_labels.txt";
     int n_batches = 1;
-    float confidence_thresh = 0.001;
+    float confidence_thresh = 0.3;
     bool show = false;
     bool write_dets = false;
     bool write_res_on_file = true;
