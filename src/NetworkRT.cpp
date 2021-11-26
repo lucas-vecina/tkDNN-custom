@@ -82,7 +82,7 @@ NetworkRT::NetworkRT(Network *net, const char *name) {
             // dtRT = DataType::kINT8;
             // builderRT->setInt8Mode(true);
             configRT->setFlag(BuilderFlag::kINT8);
-            BatchStream calibrationStream(dim, 1, 100,      //TODO: check if 100 images are sufficient to the calibration (or 4951) 
+            BatchStream calibrationStream(dim, 1, 1000,      //TODO: check if 100 images are sufficient to the calibration (or 4951) 
                                             net->fileImgList, net->fileLabelList);
             
             /* The calibTableFilePath contains the path+filename of the calibration table.
